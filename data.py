@@ -29,8 +29,24 @@ def create_table(conn):
 
 def create_users(conn, user_id, login):
     cursor = conn.cursor()
-    cursor.execute('INSERT INTO user (id, login, credits) VALUES (?, ?, ?)', (user_id, login, 1000))
-    conn.commit()
+    try:
+        cursor.execute('INSERT INTO user (id, login, credits) VALUES (?, ?, ?)', (user_id, login, 1000))
+        conn.commit()
+    except sqlite3.IntegrityError:
+        print("[ERRORS] Пользователь с таким именем уже создан!")
+
+def login_user(conn, login):
+    cursor=conn.cursor()
+    cursor.execute('SELECT * FROM user WHERE login=?', (login))
+    user=cursor.fetchall()
+    if user:
+        print("Авторизация прошла успешно!")
+        return True
+    else:
+        print("Неверное имя пользователя")
+        return False
+
+
 
 def uploadd_users():
     pass
