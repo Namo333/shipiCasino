@@ -1,3 +1,4 @@
 cmdBot/games/__pycache__/
 cmdBot/__pycache__/
-website/backend/.venv
+
+.venv
