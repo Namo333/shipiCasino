@@ -4,8 +4,7 @@ import {
     Navbar,
     MobileNav,
     Typography,
-    Button,
-    IconButton,
+    IconButton
   } from "@material-tailwind/react";
 
 const MainPage = () => {
