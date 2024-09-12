@@ -10,6 +10,7 @@ const RegistrationMenu = () => {
         </div>
         <div className="flex flex-col gap-[26px]">  
             <div className="flex flex-col gap-[10px]">
+                <Input color="white" type="email" label="Почта" />
                 <Input color="white" label="Имя пользователя" />
                 <Input color="white" type="password" label="Пароль" />
                 <Input color="white" type="password" label="Подтвердите пароль" />

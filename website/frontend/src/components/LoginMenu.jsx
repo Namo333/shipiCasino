@@ -9,7 +9,7 @@ const LoginMenu = () => (
         </div>
         <div className="flex flex-col gap-[26px]">
             <div className="flex flex-col gap-[10px]">
-                <Input color="white" label="Имя пользователя" />
+                <Input color="white" label="Имя пользователя / почта" />
                 <Input color="white" type="password" label="Пароль" />
                 <div className="flex justify-between items-center">
                     <Checkbox defaultChecked label={
@@ -17,7 +17,7 @@ const LoginMenu = () => (
                             Запомнить меня
                         </Typography>
                     } color="blue"/>
-                    <Link>Забыли пароль?</Link>
+                    <Link to='/forgotpassword'>Забыли пароль?</Link>
                 </div>
             </div>
             <Button fullWidth color="blue">Авторизироваться</Button>    
